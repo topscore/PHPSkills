@@ -200,7 +200,7 @@ class TwoTeamTrueSkillCalculator extends SkillCalculator
         $team1StdDevSquared = sum($team1Ratings, $varianceGetter);
 
         $team2MeanSum = sum($team2Ratings, $meanGetter);
-        $team2SigmaSquared = sum($team2Ratings, $varianceGetter);
+        $team2StdDevSquared = sum($team2Ratings, $varianceGetter);
 
         // This comes from equation 4.1 in the TrueSkill paper on page 8
         // The equation was broken up into the part under the square root sign and
@@ -210,14 +210,14 @@ class TwoTeamTrueSkillCalculator extends SkillCalculator
             = sqrt(
                 ($totalPlayers*$betaSquared)
                 /
-                ($totalPlayers*$betaSquared + $team1StdDevSquared + $team2SigmaSquared)
+                ($totalPlayers*$betaSquared + $team1StdDevSquared + $team2StdDevSquared)
                 );
 
         $expPart
             = exp(
                 (-1*square($team1MeanSum - $team2MeanSum))
                 /
-                (2*($totalPlayers*$betaSquared + $team1StdDevSquared + $team2SigmaSquared))
+                (2*($totalPlayers*$betaSquared + $team1StdDevSquared + $team2StdDevSquared))
                 );
 
         return $expPart*$sqrtPart;
