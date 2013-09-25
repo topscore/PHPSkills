@@ -41,7 +41,6 @@ class Player implements ISupportPartialPlay, ISupportPartialUpdate
      */
     public function getId()
     {
-        $id = $this->_Id;
         return $this->_Id;
     }
     
