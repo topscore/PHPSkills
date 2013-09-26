@@ -2,7 +2,7 @@
 	"name": "TopScore/PHPSkills",
 	"description": "Implementation of Microsoft's TrueSkill matchmaking system for PHP",
 	"keywords": ["trueskill","matchmaking"],
-	"homepage": "https://github.com/moserware/Skills",
+	"homepage": "https://github.com/TopScore/PHPSkills",
 	"require": {
 		"php": ">=5.3.0"
 	},
