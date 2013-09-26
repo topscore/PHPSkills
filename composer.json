@@ -1,5 +1,5 @@
 {
-	"name": "moserware/skills",
+	"name": "TopScore/PHPSkills",
 	"description": "Implementation of Microsoft's TrueSkill matchmaking system for PHP",
 	"keywords": ["trueskill","matchmaking"],
 	"homepage": "https://github.com/moserware/Skills",
